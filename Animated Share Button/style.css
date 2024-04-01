@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+}
+
+label {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  color: blueviolet;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+label:hover {
+  letter-spacing: 2px;
+}
+
+label::before {
+  content: "Cancel";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: white;
+  border-radius: 50px;
+  opacity: 0;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ label::before {
+  opacity: 1;
+}
+
+.icons {
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: -140px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 50px;
+  z-index: 1;
+  opacity: 0;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+#check:checked ~ .icons {
+  opacity: 1;
+  top: -100px;
+}
+
+.icons::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  z-index: -1;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.icons a {
+  font-size: 24px;
+  color: blueviolet;
+  transition: all 0.3s ease-in-out;
+}
+
+.icons a:hover {
+  transform: translateY(-5px);
+}
+
+.icons a:nth-child(1):hover {
+  color: #ff00dd;
+}
+
+.icons a:nth-child(2):hover {
+  color: #000000;
+}
+
+.icons a:nth-child(3):hover {
+  color: #ff0000;
+}
+
+.icons a:nth-child(4):hover {
+  color: #1da1f2;
+}
+
+h1 {
+  color: white;
+  margin-top: 20px;
+  font-weight: 600;
+}

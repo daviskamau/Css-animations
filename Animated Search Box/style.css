@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: lightblue;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+}
+
+#checkbox {
+  display: none;
+}
+
+.container .search-box {
+  position: relative;
+  height: 50px;
+  max-width: 50px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+#checkbox:checked ~ .search-box {
+  max-width: 380px;
+}
+
+.search-box input {
+  font-size: 18px;
+  position: absolute;
+  outline: none;
+  border: none;
+  background: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  padding-left: 20px;
+}
+
+.search-box .icon {
+  cursor: pointer;
+  width: 50px;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 25px;
+  color: blue;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#checkbox:checked ~ .search-box .icon {
+  width: 60px;
+  color: white;
+  background: blue;
+  border-radius: 0 25px 25px 0;
+}
