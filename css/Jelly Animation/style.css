@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: slateblue;
+  color: white;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.jelly {
+  width: 180px;
+  animation: jelly 1s infinite;
+}
+
+@keyframes jelly {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scaleY(1.3) scaleX(0.8);
+  }
+  50% {
+    transform: scaleY(0.8) scaleX(1.2);
+  }
+  75% {
+    transform: scaleY(1.2) scaleX(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
